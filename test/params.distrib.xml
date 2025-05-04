@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Default values for parameters. Do NOT alter this file, use params.local.xml instead -->
+<parameters>
+
+  <itop_url>http://192.168.106.1</itop_url>
+  <itop_login>admin</itop_login>
+  <itop_password>admin</itop_password>
+
+<iTopPersonCsvCollector>
+    <csv_file>collectors/iTopPersonCsvCollector.csv</csv_file>
+    <encoding>UTF-8</encoding>    
+    <fields>
+      <first_name>first_name</first_name>
+      <primary_key>primary_key</primary_key>
+      <employee_number>employee_number</employee_number>
+      <function>function</function>
+      <status>status</status>
+      <phone>phone</phone>
+      <name>name</name>
+    </fields>
+    <defaults>
+      <mobile_phone>9998877665544</mobile_phone>
+    </defaults>
+    <ignored_columns type="array">
+      <ignored_attribute>function</ignored_attribute>
+      <ignored_attribute>org_id</ignored_attribute>
+    </ignored_columns>
+    <nullified_attributes type="array">
+      <attribute>phone</attribute>
+      <attribute>employee_number</attribute>
+    </nullified_attributes>
+  </iTopPersonCsvCollector>
+
+  <json_placeholders type="hash">
+    <persons_data_table>synchro_data_persons</persons_data_table>
+  </json_placeholders>
+</parameters>
