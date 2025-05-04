@@ -1,10 +1,12 @@
-ARG GIT_VERSION=latest
-ARG PHP_VERSION=8.3-cli
+ARG GIT_IMAGETAG=latest
+ARG PHP_IMAGETAG=8.3-cli
 
-FROM alpine/git:$GIT_VERSION AS build
-RUN git clone --branch 1.4.1 https://github.com/Combodo/itop-data-collector-base.git
+FROM alpine/git:$GIT_IMAGETAG AS build
 
-FROM php:$PHP_VERSION
+ARG ITOP_IMAGETAG=1.4.1
+RUN git clone --branch $ITOP_IMAGETAG https://github.com/Combodo/itop-data-collector-base.git
+
+FROM php:$PHP_IMAGETAG
 
 COPY --from=build /git/itop-data-collector-base /opt/itop-data-collector-base
 
@@ -15,3 +17,6 @@ RUN docker-php-ext-install curl
 RUN docker-php-ext-install xml
 
 WORKDIR /opt/itop-data-collector-base
+
+# start
+ENTRYPOINT ["php", "exec.php"]
