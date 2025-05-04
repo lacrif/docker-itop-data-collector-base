@@ -2,7 +2,7 @@
 <!-- Default values for parameters. Do NOT alter this file, use params.local.xml instead -->
 <parameters>
 
-  <itop_url>http://192.168.106.1</itop_url>
+  <itop_url>http://localhost</itop_url>
   <itop_login>admin</itop_login>
   <itop_password>admin</itop_password>
 
