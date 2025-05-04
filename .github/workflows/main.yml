@@ -1,6 +1,6 @@
-name: Do things every 5 minutes
+name: Create Docker Image for itop-data-collector-base
 on:
-  push:
+  workflow_dispatch:
   schedule:
     - cron: "0 6 * * 1"
 
