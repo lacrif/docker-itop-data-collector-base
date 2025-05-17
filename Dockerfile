@@ -1,7 +1,6 @@
-ARG GIT_IMAGETAG=latest
 ARG PHP_IMAGETAG=8.3-cli
 
-FROM alpine/git:$GIT_IMAGETAG AS build
+FROM alpine/git:latest AS build
 
 ARG ITOP_IMAGETAG=1.4.1
 RUN git clone --branch $ITOP_IMAGETAG --depth 1 https://github.com/Combodo/itop-data-collector-base.git
