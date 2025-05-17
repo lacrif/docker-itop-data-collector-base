@@ -9,7 +9,6 @@ The image is based on [php](https://hub.docker.com/_/php).
 
 ## Usage
 
-
 ```shell
 docker run --rm -it -v "./test:/opt/itop-data-collector-base/collectors" itop-data-collector-base:1.4.1
 ```
@@ -32,8 +31,8 @@ docker build . \
 ## Links
 
  - [GitHub repo](https://github.com/lacrif/docker-itop-data-collector-base)
- - [Combodo](https://combodo.com)
- - [iTop Data collector](https://www.itophub.io/wiki/page?id=extensions:itop-data-collector-base)
+ - [GitHub Combodo iTop Data Collector Base repo](https://github.com/Combodo/itop-data-collector-base)
+ - [Documentation Combodo iTop Data collector](https://www.itophub.io/wiki/page?id=extensions:itop-data-collector-base)
  
 ## Author
 
