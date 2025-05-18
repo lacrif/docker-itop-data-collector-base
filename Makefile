@@ -1,5 +1,4 @@
 #vars
-GIT_IMAGETAG=latest
 PHP_IMAGETAG=8.3-cli
 ITOP_IMAGETAG=1.4.1
 ITOP_IMAGEFULLNAME=itop-data-collector-base:${ITOP_IMAGETAG}
@@ -21,7 +20,6 @@ build:
 	@echo "+ $@"
 	@docker build . \
 	--tag ${ITOP_IMAGEFULLNAME} \
-	--build-arg GIT_IMAGETAG="${GIT_IMAGETAG}" \
 	--build-arg PHP_IMAGETAG="${PHP_IMAGETAG}" \
 	--build-arg ITOP_IMAGETAG="${ITOP_IMAGETAG}"
 
